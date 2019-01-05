@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import React from 'react'
 import Logo from './logo'
 import { BREAK_POINT_SP } from '../utils/constants'
 import { jsx, css } from '@emotion/core'
