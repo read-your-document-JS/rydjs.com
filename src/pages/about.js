@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { jsx, css } from '@emotion/core'
@@ -8,7 +7,9 @@ const breakPoint = 767
 
 const style = css`
   max-width: 600px;
-  margin: 0 auto;
+  margin: 100px auto 0;
+ 
+ 
   @media (max-width: ${breakPoint}px) {
     width: auto;
     margin: 40px;
