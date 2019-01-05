@@ -1,6 +1,19 @@
+/** @jsx jsx */
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import { jsx, css } from '@emotion/core'
+
+const breakPoint = 767
+
+const style = css`
+  max-width: 600px;
+  margin: 0 auto;
+  @media (max-width: ${breakPoint}px) {
+    width: auto;
+    margin: 40px;
+  }
+`
 
 const IndexPage = () => (
   <Layout>
@@ -8,7 +21,7 @@ const IndexPage = () => (
       title="READ_YOUR_DOCUMENT.JS"
       keywords={[`JavaScript`, `Zine`, `Magazine`]}
     />
-    <div style={{maxWidth: '600px', margin: '0 auto'}}>
+    <div css={style}>
       <h2>1. JavaScriptという大きな枠組みの中での知識交流を増やしたい</h2>
       <p>
         　ここ数年でJavaScriptが利用される場面は増えてきました。例えばReactやVue.js、Angularのようなアプリケーション構築、Node.jsでのサーバーサイド実装、WebGLなどによるアニメーションなどがあります。その一方で、特定のライブラリやフレームワークの議論に終始してしまう場面が多くなったり、JavaScriptを書いている人達の中でも属しているカテゴリによって持っている知識が全然違ってしまったりよいうことが多くなってきたなと感じます。そこで私たちはJavaScriptという言語に焦点をあて、JavaScript界隈の知識をこの雑誌に集積することでカテゴリの違う知識をJavaScript界隈全体に循環させ、交流や議論を活発にしていけたらいいなと考えています。
