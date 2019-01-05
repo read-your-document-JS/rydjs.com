@@ -2,32 +2,20 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <div
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      border: `1px solid black`,
+      margin: `0 0 100px`,
+      textAlign: 'center',
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+    <h1 style={{margin: `20px 0`}}>READ_YOUR_DOCUMENT.JS</h1>
+    <ul style={{listStyleType: 'none'}}>
+      <li><Link to="/">TOP</Link></li>
+      <li><Link to="about">ABOUT</Link></li>
+      <li>ARTICLES</li>
+    </ul>
   </div>
 )
 
