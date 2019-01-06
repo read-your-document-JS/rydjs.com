@@ -24,7 +24,7 @@ const heroStyle = css`
 const heroTitleStyle = css`
   margin: 0;
   display: inline-block;
-  padding: 32px;
+  padding: 24px 24px 24px 32px;
   font-size: 72px;
   text-align: center;
   letter-spacing: 8px;
@@ -32,7 +32,7 @@ const heroTitleStyle = css`
   background-color: #${COLOR_BLACK};
   @media (max-width: ${BREAK_POINT_SP}px) {
     width: 100%;
-    padding: 24px;
+    padding: 24px 20px 24px 24px;
     font-size: 32px;
     letter-spacing: 4px;
   }
