@@ -31,11 +31,13 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Open+Sans:400,700`,
+          `Rubik:700`,
+          `Montserrat:400,700`,
           `Noto+Sans+JP:400,700`
         ]
       }
     },
+    'gatsby-plugin-page-transitions',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

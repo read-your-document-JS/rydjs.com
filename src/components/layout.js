@@ -26,16 +26,16 @@ const Layout = ({ children }) => (
           import React from 'react'
         `}>
           {children}
-          <footer css={css`
-            color: #fff;
-            line-height: 48px;
-            background-color: #10316b;
-            text-align: center;
-            font-size: 10px;
-          `}>
-            &copy; 2019 read_your_document.JS office
-          </footer>
         </div>
+        <footer css={css`
+          color: #fff;
+          line-height: 48px;
+          background-color: #10316b;
+          text-align: center;
+          font-size: 10px;
+        `}>
+          &copy; 2019 read_your_document.JS office
+        </footer>
       </>
     )}
   />

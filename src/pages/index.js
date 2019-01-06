@@ -10,7 +10,7 @@ const IndexPage = () => (
     <div css={css`
       max-width: 1024px;
       margin: 0 auto;
-      padding: 64px 0;
+      padding: 64px 0 96px;
     `}>
       <div css={css`
         max-width: 560px;
