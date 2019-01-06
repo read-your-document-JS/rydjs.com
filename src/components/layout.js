@@ -1,6 +1,8 @@
+/** @jsx jsx */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import { jsx, css } from '@emotion/core'
 
 import Header from './header'
 import './layout.css'
@@ -19,9 +21,19 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
+        <div css={css`
+          padding-top: 72px;
+          import React from 'react'
+        `}>
           {children}
-          <footer style={{margin: `0 0 200px`}}>
+          <footer css={css`
+            color: #fff;
+            line-height: 48px;
+            background-color: #10316b;
+            text-align: center;
+            font-size: 10px;
+          `}>
+            &copy; 2019 read_your_document.JS office
           </footer>
         </div>
       </>
