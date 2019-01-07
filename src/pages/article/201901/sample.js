@@ -16,15 +16,13 @@ const ArticlePage = () => (
       }
     `}>
       <article css={css`
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.5rem;
         font-size: 14px;
         padding: 60px;
         background-color: #fff;
         border: 4px solid #${COLOR_BLACK};
         @media (max-width: ${BREAK_POINT_SP}px) {
-          padding: 16px;
-          margin-left: -16px;
-          margin-right: -16px;
+          padding: 24px 16px 48px;
         }
 
         section p:not(:last-child) {
@@ -56,44 +54,28 @@ const ArticlePage = () => (
         <div css={css`
           margin-bottom: 3rem;
         `}>
+          <p css={css`
+            display: inline-block;
+            margin: 0 0 2rem;
+            padding: 0 10px 0 12px;
+            line-height: 40px;
+            background-color: #${COLOR_BLACK};
+            color: #fff;
+            letter-spacing: 2px;
+          `}>
+            2019/01
+          </p>
           <h2 css={css`
             font-size: 48px;
             @media (max-width: ${BREAK_POINT_SP}px) {
               font-size: 24px;
             }
           `}>My view on JavaScript frameworks</h2>
-          <div css={css`
-            display: flex;
-            align-items: center;
-          `}>
-            <p css={css`
-              margin: 0 1rem 0 0;
-              padding: 8px 10px 8px 12px;
-              background-color: #${COLOR_BLACK};
-              color: #fff;
-              letter-spacing: 2px;
-            `}>
-              2019/01
-            </p>
-            <p css={css`
-              margin: 0;
-            `}>Text by <a css={css`
-              font-weight: bold;
-            `} href="https://twitter.com/takanoripe" rel="noopener noreferrer" target="_blank">takanorip</a></p>
-            <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet?text=Hello%20world" css={css`
-              display: block;
-              width: 32px;
-              margin-left: auto;
-              line-height: 0;
-              background-color: #${COLOR_BLACK};
-              transition: all 0.1s ease-in;
-              &:hover {
-                background-color: #${COLOR_YELLOW};
-              }
-            `}>
-              <TwitterLogo />
-            </a>
-          </div>
+          <p css={css`
+            margin: 0;
+          `}>Text by <a css={css`
+            font-weight: bold;
+          `} href="https://twitter.com/takanoripe" rel="noopener noreferrer" target="_blank">takanorip</a></p>
         </div>
         <section>
           <h3>Preamble</h3>
@@ -132,6 +114,34 @@ const ArticlePage = () => (
           </p>
         </section>
       </article>
+      <div css={css`
+        display: flex;
+        width: 320px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 3rem;
+        padding: 24px;
+        background-color: #fff;
+        border: 4px solid #${COLOR_BLACK};
+        @media (max-width: ${BREAK_POINT_SP}px) {
+          width: 100%;
+        }
+      `}>
+        Share on:
+        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet?text=Hello%20world" css={css`
+          display: block;
+          width: 24px;
+          margin-left: 1rem;
+          line-height: 0;
+          background-color: #${COLOR_BLACK};
+          transition: all 0.1s ease-in;
+          &:hover {
+            background-color: #${COLOR_YELLOW};
+          }
+        `}>
+          <TwitterLogo />
+        </a>
+      </div>
       <LinkButton to="/articles">一覧へ戻る</LinkButton>
     </div>
   </Layout>

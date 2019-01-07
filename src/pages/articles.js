@@ -10,7 +10,7 @@ const articleStyle = css`
   display: flex;
   flex-direction: column;
   padding: 24px;
-  border: 2px solid #${COLOR_BLACK};
+  border: 4px solid #${COLOR_BLACK};
   color: #${COLOR_BLACK};
   background-color: #fff;
   position: relative;
@@ -20,10 +20,10 @@ const articleStyle = css`
     width: 100%;
     height: 100%;
     position: absolute;
-    left: 6px;
-    top: 6px;
+    left: 11px;
+    top: 10px;
     z-index: -1;
-    border: 2px solid #${COLOR_BLACK};
+    border: 4px solid #${COLOR_BLACK};
     transition: all 0.15s ease-in;
   }
   &:hover {

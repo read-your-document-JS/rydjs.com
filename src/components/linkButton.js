@@ -2,31 +2,31 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import { jsx, css } from '@emotion/core'
-import { COLOR_BLACK } from '../utils/constants'
+import { BREAK_POINT_SP, COLOR_BLACK } from '../utils/constants'
 
 const style = css`
   display: block;
-  width: 100%;
-  max-width: 320px;
+  width: 320px;
   margin: auto;
   padding: 20px 0;
-  border: 2px solid #${COLOR_BLACK};
+  border: 4px solid #${COLOR_BLACK};
   color: #${COLOR_BLACK};
   background-color: #fff;
   text-align: center;
   position: relative;
   transition: all 0.15s ease-in;
   font-size: 18px;
+  font-weight: bold;
   &::before {
     content: '';
     float: left;
     width: 100%;
     height: 100%;
     position: absolute;
-    left: 6px;
-    top: 6px;
+    left: 10px;
+    top: 10px;
     z-index: -1;
-    border: 2px solid #${COLOR_BLACK};
+    border: 4px solid #${COLOR_BLACK};
     transition: all 0.15s ease-in;
   }
   &:hover {
@@ -36,6 +36,9 @@ const style = css`
       left: 0px;
       top: 0px;
     }
+  }
+  @media (max-width: ${BREAK_POINT_SP}px) {
+    width: 100%;
   }
 `
 
