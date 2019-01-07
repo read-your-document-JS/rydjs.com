@@ -1,41 +1,12 @@
 /** @jsx jsx */
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Hero from '../components/hero'
 import { jsx, css } from '@emotion/core'
 import { BREAK_POINT_SP, COLOR_BLACK } from '../utils/constants'
 
 const containerStyle = css`
-  max-width: 1024px;
-  margin: auto;
-  padding: 0 32px 96px;
   font-size: 14px;
-  @media (max-width: ${BREAK_POINT_SP}px) {
-    padding: 0 16px 48px;
-  }
-`
-
-const heroStyle = css`
-  padding: 88px 0 172px;
-  @media (max-width: ${BREAK_POINT_SP}px) {
-    padding: 32px 0 72px;
-  }
-`
-
-const heroTitleStyle = css`
-  margin: 0;
-  display: inline-block;
-  padding: 24px 24px 24px 32px;
-  font-size: 72px;
-  text-align: center;
-  letter-spacing: 8px;
-  color: #fff;
-  background-color: #${COLOR_BLACK};
-  @media (max-width: ${BREAK_POINT_SP}px) {
-    width: 100%;
-    padding: 24px 20px 24px 24px;
-    font-size: 32px;
-    letter-spacing: 4px;
-  }
 `
 
 const rydStyle = css`
@@ -104,13 +75,11 @@ const memberNameStyle = css`
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="read_your_document.JS"
+      title="ABOUT"
       keywords={[`JavaScript`, `Zine`, `Magazine`]}
     />
     <div css={containerStyle}>
-      <div css={heroStyle}>
-        <h2 css={heroTitleStyle}>ABOUT</h2>
-      </div>
+      <Hero>ABOUT</Hero>
       <article css={articleStyle}>
         <h3 css={articleTitleStyle}>MAGAZINE</h3>
         <h4 css={rydStyle}>read_your_document.JS</h4>

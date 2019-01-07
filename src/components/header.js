@@ -55,7 +55,7 @@ const Header = () => (
       list-style: none;
     `}>
       <li css={listStyle}><Link css={linkStyle} to="about">ABOUT</Link></li>
-      <li css={listStyle}><Link css={linkStyle} to="about">ARTICLES</Link></li>
+      <li css={listStyle}><Link css={linkStyle} to="articles">ARTICLES</Link></li>
     </ul>
   </header>
 )

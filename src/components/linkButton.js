@@ -6,9 +6,12 @@ import { COLOR_BLACK } from '../utils/constants'
 
 const style = css`
   display: block;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
+  margin: auto;
   padding: 20px 0;
   border: 2px solid #${COLOR_BLACK};
+  color: #${COLOR_BLACK};
   background-color: #fff;
   text-align: center;
   position: relative;
@@ -24,7 +27,6 @@ const style = css`
     top: 6px;
     z-index: -1;
     border: 2px solid #${COLOR_BLACK};
-    background-color: #${COLOR_BLACK};
     transition: all 0.15s ease-in;
   }
   &:hover {
@@ -37,15 +39,21 @@ const style = css`
   }
 `
 
-const LinkButton = ({ children, to, href }) => {
+const LinkButton = ({ children, to, href, exStyle }) => {
   if (to) {
     return (
-      <Link css={style} to={to}>{children}</Link>
+      <Link css={css`
+        ${style};
+        ${exStyle};
+      `} to={to}>{children}</Link>
     )
   }
 
   return (
-    <a rel="noopener noreferrer" target="_blank" css={style} href={href}>{children}</a>
+    <a rel="noopener noreferrer" target="_blank" css={css`
+      ${style};
+      ${exStyle};
+    `} href={href}>{children}</a>
   )
 }
 
