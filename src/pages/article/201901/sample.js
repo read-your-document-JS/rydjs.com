@@ -2,7 +2,7 @@
 import Layout from '../../../components/layout'
 import SEO from '../../../components/seo'
 import LinkButton from '../../../components/linkButton'
-import TwitterLogo from '../../../components/TwitterLogo'
+import TwitterLogo from '../../../components/twitterLogo'
 import { jsx, css } from '@emotion/core'
 import { BREAK_POINT_SP, COLOR_BLACK, COLOR_BLUE, COLOR_YELLOW } from '../../../utils/constants'
 
