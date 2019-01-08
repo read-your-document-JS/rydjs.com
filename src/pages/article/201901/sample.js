@@ -9,7 +9,6 @@ import { BREAK_POINT_SP, COLOR_BLACK, COLOR_BLUE, COLOR_YELLOW } from '../../../
 import { articleHash } from '../../../utils/articleHash'
 
 const ArticlePage = ({ location }) => {
-  console.log(location.pathname.split('/'))
   const title = articleHash.find(d => d.path === location.pathname.split('/')[3])['title']
 
   return (
