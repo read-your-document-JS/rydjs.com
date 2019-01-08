@@ -4,7 +4,7 @@ module.exports = {
     description: `read_your_document.JSのウェブサイト`,
     author: `read_your_document.JS office`,
     siteUrl: 'https://ryd-js.com',
-    image: 'https://https://ryd-js.com/images/ogimage.png',
+    imageUrl: 'https://ryd-js.com/ogimage.png',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
