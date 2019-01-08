@@ -46,7 +46,7 @@ const Header = () => (
         width: 48px;
       }
     `}>
-      <Link to="/"><Logo /></Link>
+      <Link to="/" title="read_your_document.JS"><Logo /></Link>
     </h1>
     <ul css={css`
       display: flex;

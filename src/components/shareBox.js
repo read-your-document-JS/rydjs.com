@@ -6,7 +6,7 @@ import { BREAK_POINT_SP, COLOR_BLACK, COLOR_YELLOW } from '../utils/constants'
 import config from '../../gatsby-config'
 
 const ShareBox = ({ title, url }) => {
-  const shareText = `${title} - read_yout_document.JS ${config.siteMetadata.siteUrl}${url}`
+  const shareText = `${title} - read_your_document.JS ${config.siteMetadata.siteUrl}${url}`
   return (
     <div css={css`
       display: flex;
