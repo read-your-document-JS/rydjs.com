@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `read_your_document.JS`,
+    description: `read_your_document.JSのウェブサイト`,
+    author: `read_your_document.JS office`,
+    siteUrl: 'https://ryd-js.com',
+    imageUrl: 'https://ryd-js.com/ogimage.png',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,24 +20,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `read_your_document.JS`,
+        short_name: `ryd.JS`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ffe867`,
+        theme_color: `#ffe867`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Open+Sans:400,700`,
-          `Noto+Sans+JP:400,700`
-        ]
-      }
-    },
+    'gatsby-plugin-offline',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

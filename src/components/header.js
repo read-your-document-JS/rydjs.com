@@ -24,24 +24,20 @@ const linkStyle = css`
 `
 
 const Header = () => (
-  <div
-    css={css`
-      display: flex;
-      align-items: center;
-      padding: 0 2rem;
-      height: 72px;
-      border-bottom: 1px solid rgb(245, 243, 247);
-      background-color: #fff;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      @media (max-width: ${BREAK_POINT_SP}px) {
-        padding: 0 1rem;
-      }
-    `}
-  >
+  <header css={css`
+    display: flex;
+    align-items: center;
+    height: 72px;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    @media (max-width: ${BREAK_POINT_SP}px) {
+      padding: 0 1rem;
+    }
+  `}>
     <h1 css={css`
       margin: 0;
       width: 56px;
@@ -50,7 +46,7 @@ const Header = () => (
         width: 48px;
       }
     `}>
-      <Logo />
+      <Link to="/" title="read_your_document.JS"><Logo /></Link>
     </h1>
     <ul css={css`
       display: flex;
@@ -58,11 +54,10 @@ const Header = () => (
       margin: 0 0 0 auto;
       list-style: none;
     `}>
-      <li css={listStyle}><Link css={linkStyle} to="/">TOP</Link></li>
       <li css={listStyle}><Link css={linkStyle} to="about">ABOUT</Link></li>
-      <li css={listStyle}><Link css={linkStyle} to="about">ARTICLES</Link></li>
+      <li css={listStyle}><Link css={linkStyle} to="articles">ARTICLES</Link></li>
     </ul>
-  </div>
+  </header>
 )
 
 Header.propTypes = {
