@@ -13,7 +13,11 @@ const ArticlePage = ({ location }) => {
 
   return (
     <Layout>
-      <SEO title="TOP" keywords={[`JavaScript`, `Zine`, `Magazine`]} />
+      <SEO
+        title={articleData.title}
+        description="僕のJavaScriptフレームワークに対する所感を書いてみる。あくまで僕の個人的な考えなので、話半分に読んでもらえればと思う。"
+        keywords={[`JavaScript`, `Zine`, `Magazine`]}
+      />
       <div css={css`
         padding-top: 64px;
         @media (max-width: ${BREAK_POINT_SP}px) {

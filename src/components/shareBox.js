@@ -23,6 +23,7 @@ const ShareBox = ({ title, url }) => {
     `}>
       Share on:
       <a
+        title="twitter share button"
         rel="noopener noreferrer"
         target="_blank"
         href={`https://twitter.com/intent/tweet?text=${shareText}`}
