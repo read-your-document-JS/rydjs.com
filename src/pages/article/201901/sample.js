@@ -67,6 +67,7 @@ const ArticlePage = () => (
           </p>
           <h2 css={css`
             font-size: 48px;
+            line-height: 1.2;
             @media (max-width: ${BREAK_POINT_SP}px) {
               font-size: 24px;
             }
@@ -128,17 +129,22 @@ const ArticlePage = () => (
         }
       `}>
         Share on:
-        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet?text=Hello%20world" css={css`
-          display: block;
-          width: 24px;
-          margin-left: 1rem;
-          line-height: 0;
-          background-color: #${COLOR_BLACK};
-          transition: all 0.1s ease-in;
-          &:hover {
-            background-color: #${COLOR_YELLOW};
-          }
-        `}>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href={`https://twitter.com/intent/tweet?text=My view on JavaScript frameworks - read_yout_document.JS / ${window.location.href}`}
+          css={css`
+            display: block;
+            width: 24px;
+            margin-left: 1rem;
+            line-height: 0;
+            background-color: #${COLOR_BLACK};
+            transition: all 0.1s ease-in;
+            &:hover {
+              background-color: #${COLOR_YELLOW};
+            }
+          `}
+          >
           <TwitterLogo />
         </a>
       </div>

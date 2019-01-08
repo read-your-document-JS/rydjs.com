@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { jsx, css } from '@emotion/core'
 import { BREAK_POINT_SP, COLOR_BLACK } from '../utils/constants'
+import { articleHash } from '../utils/articleHash'
 
 const articleStyle = css`
   display: flex;
@@ -64,11 +65,9 @@ const Articles = () => (
     <SEO title="ARTICLES" />
     <Hero>ARTICLES</Hero>
     <div css={containerStyle}>
-      <Article title="Title" author="takanorip" issue="2019/01" to="/article/201901/sample" />
-      <Article title="TitleTitleTitleTitleTitleTitleTitle" author="１日一つ強くなる中西" issue="2019/01" to="/article/201901/sample" />
-      <Article title="Title" author="takanorip" issue="2019/01" to="/article/201901/sample" />
-      <Article title="Title" author="takanorip" issue="2019/01" to="/article/201901/sample" />
-      <Article title="Title" author="takanorip" issue="2019/01" to="/article/201901/sample" />
+      {articleHash.map(d => (
+        <Article key={d.title} title={d.title} author={d.author} issue={d.issue} to={`/article/${d.issue.split('/')[0]}${d.issue.split('/')[1]}/${d.path}`} />
+      ))}
     </div>
   </Layout>
 )
