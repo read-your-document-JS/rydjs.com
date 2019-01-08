@@ -9,7 +9,7 @@ import { BREAK_POINT_SP, COLOR_BLACK, COLOR_BLUE, COLOR_YELLOW } from '../../../
 import { articleHash } from '../../../utils/articleHash'
 
 const ArticlePage = ({ location }) => {
-  const title = articleHash.find(d => d.path === location.pathname.split('/')[3])['title']
+  const articleData = articleHash.find(d => d.path === location.pathname.split('/')[3])
 
   return (
     <Layout>
@@ -68,7 +68,7 @@ const ArticlePage = ({ location }) => {
               color: #fff;
               letter-spacing: 2px;
             `}>
-              2019/01
+              {articleData.issue}
             </p>
             <h2 css={css`
               font-size: 48px;
@@ -76,12 +76,12 @@ const ArticlePage = ({ location }) => {
               @media (max-width: ${BREAK_POINT_SP}px) {
                 font-size: 24px;
               }
-            `}>{title}</h2>
+            `}>{articleData.title}</h2>
             <p css={css`
               margin: 0;
             `}>Text by <a css={css`
               font-weight: bold;
-            `} href="https://twitter.com/takanoripe" rel="noopener noreferrer" target="_blank">takanorip</a></p>
+            `} href={articleData.authorUrl} rel="noopener noreferrer" target="_blank">{articleData.author}</a></p>
           </div>
           <section>
             <h3>Preamble</h3>
@@ -120,7 +120,7 @@ const ArticlePage = ({ location }) => {
             </p>
           </section>
         </article>
-        <ShareBox title={title} url={location.pathname} />
+        <ShareBox title={articleData.title} url={location.pathname} />
         <LinkButton to="/articles">一覧へ戻る</LinkButton>
       </div>
     </Layout>
