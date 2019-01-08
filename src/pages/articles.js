@@ -17,27 +17,42 @@ const articleStyle = css`
   position: relative;
   &::before {
     content: '';
-    float: left;
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
     position: absolute;
-    left: 11px;
-    top: 10px;
+    left: 3px;
+    top: 3px;
     z-index: -1;
     border: 4px solid #${COLOR_BLACK};
-    transition: all 0.15s ease-in;
+    transition: all 0.1s ease-in;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 28px 40px 0;
+    border-color: transparent #${COLOR_BLACK} transparent transparent;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
   &:hover {
     color: #${COLOR_BLACK};
     &::before {
-      left: 0px;
-      top: 0px;
+      left: -4px;
+      top: -4px;
     }
   }
 `
 
 const titleStyle = css`
   margin-bottom: auto;
+  line-height: 1.5;
+  font-size: 24px;
 `
 
 const authorStyle = css`
@@ -48,8 +63,8 @@ const authorStyle = css`
 
 const containerStyle = css`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-gap: 28px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 48px;
 `
 
 const Article = ({ title, author, issue, to }) => (

@@ -19,22 +19,22 @@ const style = css`
   font-weight: bold;
   &::before {
     content: '';
-    float: left;
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 3px;
+    top: 3px;
     z-index: -1;
     border: 4px solid #${COLOR_BLACK};
-    transition: all 0.15s ease-in;
+    transition: all 0.1s ease-in;
   }
   &:hover {
     color: #fff;
     background-color: #${COLOR_BLACK};
     &::before {
-      left: 0px;
-      top: 0px;
+      left: -4px;
+      top: -4px;
     }
   }
   @media (max-width: ${BREAK_POINT_SP}px) {

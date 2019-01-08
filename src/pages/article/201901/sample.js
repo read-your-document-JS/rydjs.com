@@ -30,8 +30,24 @@ const ArticlePage = ({ location }) => {
           padding: 60px;
           background-color: #fff;
           border: 4px solid #${COLOR_BLACK};
+          position: relative;
+          &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 80px 80px 0;
+            border-color: transparent #${COLOR_BLACK} transparent transparent;
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
           @media (max-width: ${BREAK_POINT_SP}px) {
             padding: 24px 16px 48px;
+            &::after {
+              border-width: 0 56px 56px 0;
+            }
           }
 
           section p:not(:last-child) {
