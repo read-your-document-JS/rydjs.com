@@ -37,7 +37,7 @@ export const articleHash = [
     author: '１日一つ強くなる中西',
     authorUrl: 'https://twitter.com/better_than_i_w',
     issue: '2019/01',
-    path: 'my-view-on-javascript-frameworks'
+    path: 'read-your-foreign-book'
   },
   {
     title: '文学とJavaScriptの相似形 ボルヘス: バベルの図書館',
