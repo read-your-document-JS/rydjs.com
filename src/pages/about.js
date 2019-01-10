@@ -5,10 +5,6 @@ import Hero from '../components/hero'
 import { jsx, css } from '@emotion/core'
 import { BREAK_POINT_SP, COLOR_BLACK } from '../utils/constants'
 
-const containerStyle = css`
-  font-size: 14px;
-`
-
 const rydStyle = css`
   font-size: 24px;
   font-weight: bold;
@@ -78,7 +74,7 @@ const IndexPage = () => (
       title="ABOUT"
       keywords={[`JavaScript`, `Zine`, `Magazine`]}
     />
-    <div css={containerStyle}>
+    <div>
       <Hero>ABOUT</Hero>
       <article css={articleStyle}>
         <h3 css={articleTitleStyle}>MAGAZINE</h3>

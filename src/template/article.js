@@ -25,7 +25,6 @@ const Article = ({ location, children }) => {
       `}>
         <article css={css`
           margin-bottom: 1.5rem;
-          font-size: 14px;
           padding: 60px;
           background-color: #fff;
           border: 4px solid #${COLOR_BLACK};
@@ -91,7 +90,6 @@ const Article = ({ location, children }) => {
             </p>
             <h2 css={css`
               font-size: 48px;
-              line-height: 1.2;
               @media (max-width: ${BREAK_POINT_SP}px) {
                 font-size: 24px;
               }
