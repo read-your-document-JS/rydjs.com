@@ -67,9 +67,7 @@ function SEO({ description, lang, meta, keywords, title, imageUrl }) {
                   : []
               )
               .concat(meta)}
-          >
-            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Noto+Sans+JP:400,700|Rubik:700" rel="stylesheet" />
-          </Helmet>
+          />
         )
       }}
     />
