@@ -45,7 +45,7 @@ export const articleHash = [
     author: '１日一つ強くなる中西',
     authorUrl: 'https://twitter.com/better_than_i_w',
     issue: '2019/01',
-    path: 'my-view-on-javascript-frameworks'
+    path: 'similarities-between-literature-and-javascript'
   },
   {
     title: 'My view on JavaScript frameworks',

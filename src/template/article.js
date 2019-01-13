@@ -2,10 +2,9 @@
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import LinkButton from '../components/linkButton'
-import TwitterLogo from '../components/twitterLogo'
 import ShareBox from '../components/shareBox'
 import { jsx, css } from '@emotion/core'
-import { BREAK_POINT_SP, COLOR_BLACK, COLOR_BLUE, COLOR_YELLOW } from '../utils/constants'
+import { BREAK_POINT_SP, COLOR_BLACK, COLOR_BLUE } from '../utils/constants'
 import { articleHash } from '../utils/articleHash'
 
 const Article = ({ location, children }) => {
