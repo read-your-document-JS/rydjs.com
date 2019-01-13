@@ -1,4 +1,5 @@
 /** @jsx jsx */
+// eslint-disable-next-line
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import Article from '../../../template/article'
-import { jsx, css } from '@emotion/core'
+import { jsx } from '@emotion/core'
 
 const ArticlePage = ({ location }) => (
   <Article location={location}>

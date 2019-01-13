@@ -45,8 +45,13 @@ const articleTitleStyle = css`
     bottom: 0;
   }
   @media (max-width: ${BREAK_POINT_SP}px) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
     font-size: 24px;
+    &::after {
+      height: 4px;
+      width: 24px;
+    }
   }
 `
 

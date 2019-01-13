@@ -4,7 +4,7 @@ import Hero from '../components/hero'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { jsx, css } from '@emotion/core'
-import { BREAK_POINT_SP, COLOR_BLACK } from '../utils/constants'
+import { COLOR_BLACK } from '../utils/constants'
 import { articleHash } from '../utils/articleHash'
 
 const articleStyle = css`
