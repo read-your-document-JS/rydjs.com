@@ -27,11 +27,16 @@ const IndexPage = () => (
         font-weight: bold;
         text-align: center;
       `}>
-        2019年1月発売予定
+        好評販売中
       </p>
-      <LinkButton exStyle={css`
-        margin-top: 2rem;
-      `} href="hoge.com">Check it out</LinkButton>
+      <LinkButton
+        exStyle={css`
+          margin-top: 2rem;
+        `}
+        href="https://inutetraplus.booth.pm/items/1199029"
+      >
+        Check it out
+      </LinkButton>
     </div>
   </Layout>
 )

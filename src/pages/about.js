@@ -84,7 +84,11 @@ const IndexPage = () => (
       <article css={articleStyle}>
         <h3 css={articleTitleStyle}>MAGAZINE</h3>
         <h4 css={rydStyle}>read_your_document.JS</h4>
-        <p>隔月出版のJavaScript専門同人雑誌。BOOTHにて好評発売中。</p>
+        <p>隔月出版のJavaScript専門同人雑誌。
+          <a rel="noopener noreferrer" target="_blank" href="https://inutetraplus.booth.pm/items/1199029">
+            BOOTH
+          </a>にて好評発売中。
+        </p>
         <p>「詩を読む前に、もっとドキュメントを読んだ方がいいと思うぜ。」</p>
       </article>
       <article css={articleStyle}>
