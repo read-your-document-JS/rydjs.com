@@ -6,7 +6,8 @@ import { BREAK_POINT_SP, COLOR_BLACK, COLOR_YELLOW } from '../utils/constants'
 import config from '../../gatsby-config'
 
 const ShareBox = ({ title, url }) => {
-  const shareText = `${title} - read_your_document.JS ${config.siteMetadata.siteUrl}${url}`
+  const shareText = `${title} - read_your_document.JS ${config.siteMetadata.siteUrl}${url} #rydjs`
+  const encodedShareText = encodeURIComponent(shareText)
   return (
     <div css={css`
       display: flex;
@@ -26,7 +27,7 @@ const ShareBox = ({ title, url }) => {
         title="twitter share button"
         rel="noopener noreferrer"
         target="_blank"
-        href={`https://twitter.com/intent/tweet?text=${shareText}`}
+        href={`https://twitter.com/intent/tweet?text=${encodedShareText}`}
         css={css`
           display: block;
           width: 24px;
