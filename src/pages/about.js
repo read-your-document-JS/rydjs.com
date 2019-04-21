@@ -1,4 +1,6 @@
 /** @jsx jsx */
+import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Hero from '../components/hero'
@@ -24,7 +26,11 @@ const articleStyle = css`
   @media (max-width: ${BREAK_POINT_SP}px) {
     padding: 24px;
     &:not(:last-child) {
-      margin-bottom: 32px;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 1rem;
     }
   }
 `
@@ -69,11 +75,27 @@ const listStyle = css`
   list-style: none;
 `
 
+const backnumberStyle = css`
+  display: grid;
+  align-self: center;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(144px, 240px));
+  list-style: none;
+
+  @media (max-width: ${BREAK_POINT_SP}px) {
+    display: block;
+  }
+`
+
+const backnumberItemStyle = css`
+  margin: 0;
+`
+
 const memberNameStyle = css`
   font-weight: bold;
 `
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO
       title="ABOUT"
@@ -120,6 +142,25 @@ const IndexPage = () => (
       </article>
       <article css={articleStyle}>
         <h3 css={articleTitleStyle}>BACK NUMBER</h3>
+        <ul css={backnumberStyle}>
+          {data.backnumbersJson.items.map(b => (
+            <li css={backnumberItemStyle} key={b.boothId}>
+              <a rel="noopener noreferrer" target="_blank" href={`https://inutetraplus.booth.pm/items/${b.boothId}`}>
+                <figure css={css`
+                  margin-bottom: 0.5rem;
+                `}>
+                  <Img fluid={b.image.childImageSharp.fluid} alt={`vol.${b.number}表紙`}/>
+                </figure>
+                <h4 css={css`
+                  margin: 0;
+                `}>
+                  rydjs vol.{b.number}<br/>
+                  {b.theme}
+                </h4>
+              </a>
+            </li>
+          ))}
+        </ul>
       </article>
       <article css={articleStyle}>
         <h3 css={articleTitleStyle}>MEMBER</h3>
@@ -146,3 +187,22 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query AboutQuery {
+    backnumbersJson {
+      items {
+        number
+        theme
+        boothId
+        image {
+          childImageSharp {
+            fluid(maxWidth: 750, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;

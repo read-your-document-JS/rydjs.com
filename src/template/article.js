@@ -42,6 +42,7 @@ const Article = ({ location, children }) => {
           }
           @media (max-width: ${BREAK_POINT_SP}px) {
             padding: 24px 16px 48px;
+            font-size: 14px;
             &::after {
               border-width: 0 56px 56px 0;
             }

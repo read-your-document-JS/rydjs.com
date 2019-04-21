@@ -33,7 +33,7 @@ const IndexPage = () => (
         exStyle={css`
           margin-top: 2rem;
         `}
-        href="https://inutetraplus.booth.pm/items/1199029"
+        href="https://inutetraplus.booth.pm/items/1320734"
       >
         Check it out
       </LinkButton>
